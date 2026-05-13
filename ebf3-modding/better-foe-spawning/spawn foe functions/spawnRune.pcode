@@ -1,0 +1,114 @@
+ConstantPool "g", "cla", "RockRune", "FireRune", "BoltRune", "HolyRune", "spawning RUNE", "foes", "dead", "it was dead", "graphic", "foe", "point", "updateFoeBars"
+DefineFunction2 "spawnRune", 2, 4, false, false, true, false, true, false, false, true, false, 2, "n", 3, "lvl" {
+Push register3
+Push undefined
+Equals2
+Not
+If loc00ac
+Push 24
+StoreRegister 3
+Pop
+loc00ac:Push "g"
+Push 4
+RandomNumber
+SetVariable
+Push "g"
+GetVariable
+Push 0
+Equals2
+Not
+If loc00dc
+Push "cla"
+Push "RockRune"
+GetVariable
+SetVariable
+loc00dc:Push "g"
+GetVariable
+Push 1
+Equals2
+Not
+If loc00fd
+Push "cla"
+Push "FireRune"
+GetVariable
+SetVariable
+loc00fd:Push "g"
+GetVariable
+Push 2
+Equals2
+Not
+If loc011e
+Push "cla"
+Push "BoltRune"
+GetVariable
+SetVariable
+loc011e:Push "g"
+GetVariable
+Push 3
+Equals2
+Not
+If loc013f
+Push "cla"
+Push "HolyRune"
+GetVariable
+SetVariable
+loc013f:Push "spawning RUNE"
+Trace
+Push "foes"
+GetVariable
+Push register2
+GetMember
+Push "dead"
+GetMember
+Not
+If loc01fd
+Push "it was dead"
+Trace
+Push "foes"
+GetVariable
+Push register2
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push register2
+Delete
+Pop
+Push register1
+Push "foe"
+Push register2
+Add2
+Push register1
+Push "point"
+Push 3
+Push register2
+Add2
+Add2
+GetMember
+Push register1
+Push register3
+Push register2
+Push 4
+Push "cla"
+NewObject
+SetMember
+Push "foes"
+GetVariable
+Push register2
+Push register1
+Push "foe"
+Push register2
+Add2
+GetMember
+SetMember
+Push 0
+Push "updateFoeBars"
+CallFunction
+Pop
+Push true
+Return
+loc01fd:Push false
+Return
+}

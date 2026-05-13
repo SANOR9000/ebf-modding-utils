@@ -1,0 +1,70 @@
+ConstantPool "spawning arms", "xd", "foes", "length", "SquidArm", "intro2", "graphic", "gotoAndPlay", "HP", "maxHP", "dead", "updateFoeBars"
+DefineFunction "spawnArms", 0 {
+Push "spawning arms"
+Trace
+Push "xd"
+Push 0
+DefineLocal
+loc0087:Push "xd"
+GetVariable
+Push "foes"
+GetVariable
+Push "length"
+GetMember
+Less2
+Not
+If loc0133
+Push "foes"
+GetVariable
+Push "xd"
+GetVariable
+GetMember
+Push "SquidArm"
+GetVariable
+InstanceOf
+Not
+If loc0121
+Push "intro2"
+Push 1
+Push "foes"
+GetVariable
+Push "xd"
+GetVariable
+GetMember
+Push "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Push "foes"
+GetVariable
+Push "xd"
+GetVariable
+GetMember
+Push "HP"
+Push "foes"
+GetVariable
+Push 1
+GetMember
+Push "maxHP"
+GetMember
+SetMember
+Push "foes"
+GetVariable
+Push "xd"
+GetVariable
+GetMember
+Push "dead"
+Push false
+SetMember
+loc0121:Push "xd"
+Push "xd"
+GetVariable
+Increment
+SetVariable
+Jump loc0087
+loc0133:Push 0
+Push "updateFoeBars"
+CallFunction
+Pop
+}

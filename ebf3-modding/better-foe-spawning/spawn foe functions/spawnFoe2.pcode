@@ -1,0 +1,39 @@
+DefineFunction2 "spawnFoe2", 2, 5, false, false, true, false, true, false, false, true, false, 3, "cla", 4, "lvl" {
+Push "spawning something"
+Trace
+Push "foes"
+GetVariable
+Push 3
+GetMember
+Push "dead"
+GetMember
+Not
+If loc00da
+Push "is was dead"
+Trace
+Push "foes"
+GetVariable
+Push 3
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 3
+Delete
+Pop
+Push "point6"
+GetVariable
+Push register1, register4, 3, 4, register3, undefined
+NewMethod
+StoreRegister 2
+Pop
+Push "foes"
+GetVariable
+Push 3, register2
+SetMember
+loc00da:Push 0.0, "updateFoeBars"
+CallFunction
+Pop
+}

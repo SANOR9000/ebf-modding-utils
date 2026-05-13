@@ -1,0 +1,111 @@
+ConstantPool "spawning bushes", "foes", "foeName", "dead", "is was dead", "graphic", "point15", "GreenBush", "point7", "updateFoeBars"
+DefineFunction2 "spawnBush", 1, 5, false, false, true, false, true, false, false, true, false, 2, "lvl" {
+Push register2
+Push undefined
+Equals2
+Not
+If loc0098
+Push 8
+StoreRegister 2
+Pop
+loc0098:Push "spawning bushes"
+Trace
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "foeName"
+GetMember
+Trace
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "dead"
+GetMember
+Trace
+Push undefined
+StoreRegister 3
+Pop
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "dead"
+GetMember
+Not
+If loc0159
+Push "is was dead"
+Trace
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 0
+Delete
+Pop
+Push "point15"
+GetVariable
+Push register1
+Push register2
+Push 0
+Push 4
+Push "GreenBush"
+NewObject
+StoreRegister 3
+Pop
+Push "foes"
+GetVariable
+Push 0
+Push register3
+SetMember
+loc0159:Push undefined
+StoreRegister 4
+Pop
+Push "foes"
+GetVariable
+Push 2
+GetMember
+Push "dead"
+GetMember
+Not
+If loc01e8
+Push "is was dead"
+Trace
+Push "foes"
+GetVariable
+Push 2
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 2
+Delete
+Pop
+Push "point7"
+GetVariable
+Push register1
+Push register2
+Push 2
+Push 4
+Push "GreenBush"
+NewObject
+StoreRegister 4
+Pop
+Push "foes"
+GetVariable
+Push 2
+Push register4
+SetMember
+loc01e8:Push 0
+Push "updateFoeBars"
+CallFunction
+Pop
+}

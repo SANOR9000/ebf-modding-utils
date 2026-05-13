@@ -1,0 +1,98 @@
+ConstantPool "spawning WORM", "foes", "dead", "it was dead", "graphic", "foe0", "pointB1", "EvilWorm", "updateFoeBars", "foe4", "pointB5", "EvilTail"
+DefineFunction2 "spawnWorm", 1, 3, false, false, true, false, true, false, false, true, false, 2, "lvl" {
+Push register2
+Push undefined
+Equals2
+Not
+If loc00a1
+Push 32
+StoreRegister 2
+Pop
+loc00a1:Push "spawning WORM"
+Trace
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "dead"
+GetMember
+Not
+If loc013e
+Push "it was dead"
+Trace
+Push "foes"
+GetVariable
+Push 0
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 0
+Delete
+Pop
+Push "foe0"
+Push "pointB1"
+GetVariable
+Push register1
+Push register2
+Push 0
+Push 4
+Push "EvilWorm"
+NewObject
+SetVariable
+Push "foes"
+GetVariable
+Push 0
+Push "foe0"
+GetVariable
+SetMember
+Push 0
+Push "updateFoeBars"
+CallFunction
+Pop
+loc013e:Push "foes"
+GetVariable
+Push 4
+GetMember
+Push "dead"
+GetMember
+Not
+If loc01d5
+Push "it was dead"
+Trace
+Push "foes"
+GetVariable
+Push 4
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 4
+Delete
+Pop
+Push "foe4"
+Push "pointB5"
+GetVariable
+Push register1
+Push register2
+Push 4
+Push 4
+Push "EvilTail"
+NewObject
+SetVariable
+Push "foes"
+GetVariable
+Push 4
+Push "foe4"
+GetVariable
+SetMember
+Push 0
+Push "updateFoeBars"
+CallFunction
+Pop
+}
+loc01d5:

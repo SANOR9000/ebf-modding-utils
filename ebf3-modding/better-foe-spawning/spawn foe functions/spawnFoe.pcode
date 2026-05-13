@@ -1,0 +1,103 @@
+DefineFunction2 "spawnFoe", 2, 6, false, false, true, false, true, false, false, true, false, 4, "cla", 5, "lvl" {
+Push "spawning"
+Trace
+Push "foes"
+GetVariable
+Push 0.0
+GetMember
+Push "foeName"
+GetMember
+Trace
+Push "foes"
+GetVariable
+Push 0.0
+GetMember
+Push "dead"
+GetMember
+Trace
+Push "foes"
+GetVariable
+Push 0.0
+GetMember
+Push "dead"
+GetMember
+Not
+If loc0170
+Push "is was dead at depth "
+Trace
+Push 0.0, "foes"
+GetVariable
+Push 0.0
+GetMember
+Push "graphic"
+GetMember
+Push "getDepth"
+CallMethod
+Trace
+Push "foes"
+GetVariable
+Push 0.0
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 0.0
+Delete
+Pop
+Push "point3"
+GetVariable
+Push register1, register5, 0.0, 4, register4, undefined
+NewMethod
+StoreRegister 3
+Pop
+Push "foes"
+GetVariable
+Push 0.0, register3
+SetMember
+loc0170:Push "foes"
+GetVariable
+Push 4
+GetMember
+Push "dead"
+GetMember
+Not
+If loc0256
+Push "is was dead at depth "
+Trace
+Push 0.0, "foes"
+GetVariable
+Push 4
+GetMember
+Push "graphic"
+GetMember
+Push "getDepth"
+CallMethod
+Trace
+Push "foes"
+GetVariable
+Push 4
+GetMember
+Push "graphic"
+Delete
+Pop
+Push "foes"
+GetVariable
+Push 4
+Delete
+Pop
+Push "point7"
+GetVariable
+Push register1, register5, 4, 4, register4, undefined
+NewMethod
+StoreRegister 2
+Pop
+Push "foes"
+GetVariable
+Push 4, register2
+SetMember
+loc0256:Push 0.0, "updateFoeBars"
+CallFunction
+Pop
+}
