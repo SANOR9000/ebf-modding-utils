@@ -14,7 +14,7 @@ Also reworks Rune Claw to use Akron's orb regardless of the latter's position or
 ### redirect-sendHits-to-magicGraphics
 Remember the 4 copies of ```function luckystar()```? Now you can make them always redirect to ```magicGraphics``` instead
 
-## Misc
+## Save editing
 
 ### give-all-festival-exclusives
 Drop in a ```input.meow``` file, run the script and an ```output.meow``` file will be created with all quests, equipments and skills tied to festivals given to you  
