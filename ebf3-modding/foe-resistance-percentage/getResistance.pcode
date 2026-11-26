@@ -20,7 +20,18 @@ Pop
 Push 0
 StoreRegister 5
 Pop
-loc325a:Push register2
+Push "nbs"
+Push "non-breaking space"
+SetVariable
+Push "nbs"
+Push 160
+Push 1
+Push "String"
+GetVariable
+Push "fromCharCode"
+CallMethod
+SetVariable
+loc33ba:Push register2
 Push register4
 Push 1
 Subtract
@@ -28,10 +39,8 @@ GetMember
 Push 1
 Less2
 Not
-If loc32fa
-Push register3
-Push register5
-Push " "
+If loc34c2
+Push "degree"
 Push 1
 Push register2
 Push register4
@@ -41,8 +50,24 @@ GetMember
 Subtract
 Push 100
 Multiply
+SetVariable
+Push register4
+Push register2
+Push "length"
+GetMember
+Less2
+Not
+If loc345e
+Push register3
+Push register5
+Push " "
+Push "degree"
+GetVariable
 Add2
-Push "% "
+Push "%"
+Add2
+Push "nbs"
+GetVariable
 Add2
 Push register2
 Push register4
@@ -51,7 +76,26 @@ Subtract
 GetMember
 Add2
 SetMember
+Jump loc3497
+loc345e:Push register3
+Push register5
+Push ""
+Push "degree"
+GetVariable
+Add2
+Push "%"
+Add2
+Push "nbs"
+GetVariable
+Add2
+Push register2
 Push register4
+Push 2
+Subtract
+GetMember
+Add2
+SetMember
+loc3497:Push register4
 Push 2
 Subtract
 StoreRegister 4
@@ -61,8 +105,8 @@ Push 1
 Add2
 StoreRegister 5
 Pop
-Jump loc325a
-loc32fa:Push register3
+Jump loc33ba
+loc34c2:Push register3
 Return
 }
 SetMember
