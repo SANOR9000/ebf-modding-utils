@@ -14,6 +14,9 @@ Also reworks Rune Claw to use Akron's orb regardless of the latter's position or
 ### redirect-sendHits-to-magicGraphics
 Remember the 4 copies of ```function luckystar()```? Now you can make them always redirect to ```magicGraphics``` instead
 
+### foe-resistance-percentage
+When viewing the stats of a foe, you'll be able to see the degree of the foe's resistances (100% fire, -80% dark, etc.)
+
 ## Save editing
 
 ### give-all-festival-exclusives

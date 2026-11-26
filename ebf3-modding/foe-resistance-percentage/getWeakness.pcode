@@ -1,0 +1,64 @@
+Push register2
+Push "getWeakness"
+DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 2, "arr" {
+Push register2
+Push 1
+Push register1
+Push "sortResistance"
+CallMethod
+StoreRegister 2
+Pop
+Push 0
+InitArray
+StoreRegister 3
+Pop
+Push 0
+StoreRegister 4
+Pop
+Push 0
+StoreRegister 5
+Pop
+loc315a:Push register2
+Push register4
+Push 1
+Add2
+GetMember
+Push 1
+Greater
+Not
+If loc31f1
+Push register3
+Push register5
+Push " "
+Push 1
+Push register2
+Push register4
+Push 1
+Add2
+GetMember
+Subtract
+Push 100
+Multiply
+Add2
+Push "% "
+Add2
+Push register2
+Push register4
+GetMember
+Add2
+SetMember
+Push register4
+Push 2
+Add2
+StoreRegister 4
+Pop
+Push register5
+Push 1
+Add2
+StoreRegister 5
+Pop
+Jump loc315a
+loc31f1:Push register3
+Return
+}
+SetMember

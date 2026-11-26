@@ -1,0 +1,2 @@
+1. Create two news scripts called "PlayerBrickers" and "FoeBrickers". You can rename them if you'd like, but remember to modify the "Player" and/or "Foe" scripts with find-replace if you do so.
+2. Paste the corresponding PCode on the "Player", "PlayerBrickers", "Foe" and "FoeBrickers" code.

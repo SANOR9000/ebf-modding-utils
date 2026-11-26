@@ -1,0 +1,1 @@
+They're methods in Foe script. Replace them, idealy with PCode, though it may not be needed if you already applied the safe-edit snippet.

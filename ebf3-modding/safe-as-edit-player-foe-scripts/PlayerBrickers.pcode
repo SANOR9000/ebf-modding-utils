@@ -1,0 +1,178 @@
+ConstantPool "_global", "PlayerBrickers", "prototype", "ASSetPropFlags"
+Push "_global"
+GetVariable
+Push "PlayerBrickers"
+GetMember
+Not
+Not
+If loc048d
+Push "_global"
+GetVariable
+Push "PlayerBrickers"
+DefineFunction "", 0 {
+}
+StoreRegister 1
+SetMember
+Push register1
+Push "prototype"
+GetMember
+StoreRegister 2
+Pop
+Push register1
+Push "handleGraphicData"
+DefineFunction "", 3, "player" , "p" , "point"  {
+Push "player"
+GetVariable
+Push "parent", "p"
+GetVariable
+SetMember
+Push "player"
+GetVariable
+Push "graphic", "p.player", "player"
+GetVariable
+Push "playerNumber"
+GetMember
+Add2
+Push "Graphic"
+Add2
+GetVariable
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "playerData", "player"
+GetVariable
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "_xscale", 67.7
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "_yscale", 67.7
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "k"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "playerData"
+GetMember
+Push "gettingHit"
+GetMember
+Not
+Not
+If loc020e
+Push "stand", 1, register1, "gotoAndPlay"
+CallMethod
+Pop
+}
+loc020e:SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "run"
+DefineFunction2 "", 2, 2, false, false, true, false, true, false, false, true, false, 0, "X", 0, "Y" {
+Push register1, "_x", register1, "_x"
+GetMember
+Push register1, "X"
+GetMember
+Subtract
+SetMember
+Push register1, "_y", register1, "_y"
+GetMember
+Push register1, "Y"
+GetMember
+Subtract
+SetMember
+}
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "getPoint"
+DefineFunction "", 1, "a"  {
+Push "this.point", "a"
+GetVariable
+Add2
+GetVariable
+Return
+}
+SetMember
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "shake"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "a" {
+Push register2, 1, register1, "_parent"
+GetMember
+Push "shake"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+}
+SetMember
+Push "player"
+GetVariable
+Push "depth", 0.0, "player"
+GetVariable
+Push "graphic"
+GetMember
+Push "getDepth"
+CallMethod
+SetMember
+Push "point"
+GetVariable
+Push 1, "player"
+GetVariable
+Push "reposition"
+CallMethod
+Pop
+Push "player"
+GetVariable
+Push "graphic"
+GetMember
+Trace
+}
+SetMember
+Push register1
+Push "makeDamageObject"
+DefineFunction2 "", 10, 11, false, false, true, false, true, false, true, false, false, 1, "type", 2, "power", 3, "randomness", 4, "element", 5, "e", 6, "stat", 7, "s", 8, "ss", 9, "acc", 10, "critP" {
+Push register10
+Push register9
+Push register8
+Push register7
+Push register6
+Push register5
+Push register4
+Push register3
+Push register2
+Push register1
+Push 10
+Push "DamageObject"
+NewObject
+Return
+}
+SetMember
+Push 1
+Push null
+Push "_global"
+GetVariable
+Push "PlayerBrickers"
+GetMember
+Push "prototype"
+GetMember
+Push 3
+Push "ASSetPropFlags"
+CallFunction
+loc048d:Pop

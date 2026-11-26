@@ -1,0 +1,211 @@
+ConstantPool "_global", "FoeBrickers", "prototype", "ASSetPropFlags"
+Push "_global"
+GetVariable
+Push "FoeBrickers"
+GetMember
+Not
+Not
+If loc0569
+Push "_global"
+GetVariable
+Push "FoeBrickers"
+DefineFunction "", 0 {
+}
+StoreRegister 1
+SetMember
+Push register1
+Push "prototype"
+GetMember
+StoreRegister 2
+Pop
+Push register1
+Push "handleGraphicData"
+DefineFunction "", 4, "foe" , "n" , "p" , "point"  {
+Push "foe"
+GetVariable
+Push "parent", "p"
+GetVariable
+SetMember
+Push "foe"
+GetVariable
+Push "foeNumber", "n"
+GetVariable
+SetMember
+Push "graphicData"
+Push "foeData", "foe"
+GetVariable
+Push "monster", "foe"
+GetVariable
+Push "subGraphic"
+GetMember
+Push "k"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "foeData"
+GetMember
+Push "graphic"
+GetMember
+Push undefined
+Equals2
+Not
+If loc01ca
+Push register1, "foeData"
+GetMember
+Push "graphic", register1
+SetMember
+Push "point"
+GetVariable
+Push 1, register1, "foeData"
+GetMember
+Push "reposition"
+CallMethod
+Pop
+Push "FOE GRAPHIC WAS UNDEFINED, FOE FIXED IT"
+Trace
+loc01ca:Push register1, "foeData"
+GetMember
+Push "gettingHit"
+GetMember
+Not
+Not
+If loc024a
+Push "stand", 1, register1, "gotoAndPlay"
+CallMethod
+Pop
+Push 0, register1, "foeData"
+GetMember
+Push "unbusy"
+CallMethod
+Pop
+Push false, 1, register1, "swapLayer"
+CallMethod
+Pop
+}
+loc024a:Push "run"
+DefineFunction2 "", 2, 2, false, false, true, false, true, false, false, true, false, 0, "X", 0, "Y" {
+Push register1, "_x", register1, "_x"
+GetMember
+Push register1, "X"
+GetMember
+Subtract
+SetMember
+Push register1, "_y", register1, "_y"
+GetMember
+Push register1, "Y"
+GetMember
+Subtract
+SetMember
+}
+Push "getPoint"
+DefineFunction "", 1, "a"  {
+Push "this.point", "a"
+GetVariable
+Add2
+GetVariable
+Return
+}
+Push "shake"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "a" {
+Push register2, 1, register1, "_parent"
+GetMember
+Push "shake"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+}
+Push 6
+InitObject
+DefineLocal
+Push "graphicData"
+GetVariable
+Push 50, "n"
+GetVariable
+Push 5
+Multiply
+Add2
+Push "foe", "foe"
+GetVariable
+Push "foeNumber"
+GetMember
+Add2
+Push "Graphic"
+Add2
+Push "foe"
+GetVariable
+Push "mainGraphic"
+GetMember
+Push 4, "foe"
+GetVariable
+Push "parent"
+GetMember
+Push "attachMovie"
+CallMethod
+Pop
+Push "foe"
+GetVariable
+Push "graphic", "p.foe", "foe"
+GetVariable
+Push "foeNumber"
+GetMember
+Add2
+Push "Graphic"
+Add2
+GetVariable
+SetMember
+Push "point"
+GetVariable
+Push 1, "foe"
+GetVariable
+Push "reposition"
+CallMethod
+Pop
+Push "foe"
+GetVariable
+Push "depth", 50, "n"
+GetVariable
+Push 5
+Multiply
+Add2
+SetMember
+Push "Foe graphic at depth: "
+Trace
+Push 0, "foe"
+GetVariable
+Push "graphic"
+GetMember
+Push "getDepth"
+CallMethod
+Trace
+}
+SetMember
+Push register1
+Push "makeDamageObject"
+DefineFunction2 "", 10, 11, false, false, true, false, true, false, true, false, false, 1, "type", 2, "power", 3, "randomness", 4, "element", 5, "e", 6, "stat", 7, "s", 8, "ss", 9, "acc", 10, "critP" {
+Push register10
+Push register9
+Push register8
+Push register7
+Push register6
+Push register5
+Push register4
+Push register3
+Push register2
+Push register1
+Push 10
+Push "DamageObject"
+NewObject
+Return
+}
+SetMember
+Push 1
+Push null
+Push "_global"
+GetVariable
+Push "FoeBrickers"
+GetMember
+Push "prototype"
+GetMember
+Push 3
+Push "ASSetPropFlags"
+CallFunction
+loc0569:Pop

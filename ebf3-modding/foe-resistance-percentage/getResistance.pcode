@@ -1,0 +1,68 @@
+Push register2
+Push "getResistance"
+DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 2, "arr" {
+Push register2
+Push 1
+Push register1
+Push "sortResistance"
+CallMethod
+StoreRegister 2
+Pop
+Push 0
+InitArray
+StoreRegister 3
+Pop
+Push register2
+Push "length"
+GetMember
+StoreRegister 4
+Pop
+Push 0
+StoreRegister 5
+Pop
+loc325a:Push register2
+Push register4
+Push 1
+Subtract
+GetMember
+Push 1
+Less2
+Not
+If loc32fa
+Push register3
+Push register5
+Push " "
+Push 1
+Push register2
+Push register4
+Push 1
+Subtract
+GetMember
+Subtract
+Push 100
+Multiply
+Add2
+Push "% "
+Add2
+Push register2
+Push register4
+Push 2
+Subtract
+GetMember
+Add2
+SetMember
+Push register4
+Push 2
+Subtract
+StoreRegister 4
+Pop
+Push register5
+Push 1
+Add2
+StoreRegister 5
+Pop
+Jump loc325a
+loc32fa:Push register3
+Return
+}
+SetMember

@@ -1,0 +1,2703 @@
+ConstantPool "_global", "Foe", "super", "this", "parent", "p", "m", "levelUp", "foeNumber", "n", "graphicData", "foeData", "monster", "subGraphic", "k", "graphic", "point", "reposition", "FOE GRAPHIC WAS UNDEFINED, FOE FIXED IT", "gettingHit", "stand", "gotoAndPlay", "unbusy", "swapLayer", "run", "_x", "X", "_y", "Y", "getPoint", "this.point", "a", "shake", "_parent", "foe", "Graphic", "mainGraphic", "attachMovie", "p.foe", "depth", "Foe graphic at depth: ", "getDepth", "Target", "prototype", "dropItems", "dropList", "length", "Math", "random", "dropItem", "getClass", "doomed", "doom", "busy", "death", "null", "maxHP", "hit2HP", "magicDefence", "magic", "DamageObject", "getHit", "idle", "stats", "update", "checkBusy", "getPower", "attack", "attackBuff", "magicAttack", "magicAttackBuff", "getHpPercent", "HP", "round", "sendHeal", "healing for ", "targetAll", "allFoes", "foes", "dead", "getHeal", "oneFoe", "target", "sendHit", "randomize", "accuracy", "accuracyBuff", "berserk", "onePlayer", "allPlayers", "players", "all", "getGraphicDepth", "swapDepths", "specialHit1", "specialHit2", "specialHit3", "specialHit4", "specialHit5", "foe takes damage: ", "damage", " element: ", "element", " status: ", "statusEffect", " chance: ", "statusChance", "delay", "createEmptyMovieClip", "onEnterFrame", "removeMovieClip", "Accuracy: ", " Evade: ", "evade", "evadeBuff", "stun", "showDamage", "user", "dealt", "randomness", "t", "defence", "defenceBuff", "magicDefenceBuff", "crit", "ice", "getElementalResistance", "elementDegree", "getStatusResistance", "Inflicted with ", "statusDegree", "getY", "getX", "showStatus", "poison", "syphon", "dispel", "debuff", "after defence applied: ", "Player", "defs", "damageRecord", "maxDamage", "kongregate", "submit", "doDie", "die", "hit2", "hit", "updateFoeBars", "addPool", "flags", "killCount", "kills", "playerStatus", "checkAllDead", "regen", "goldPool", "gold", "expPool", "experience", "abilityPool", "abilityPoints", "active", "act", "turnEnd", "turnStart", "turnTaken", "randomPlayer", "getXY", "c", "substring", "Buff", "minBuff", "buff", "maxBuff", "heal", "healStatus", "castSpell", "magicGraphics", "elementalResistance", "statusResistance", " resistance ", "sortResistance", "notIn", "getWeakness", " ", "getResistance", "difficulty", "easy", "normal", "hard", "epic", "level", "pow", "floor", "_xscale", "_yscale", "point1", "scaleGraphic", "printStats", "\nName: ", "foeName", "\nType: ", "foeType", "\nHP: ", "/", "\n", "Elem Weakness: ", "\nElem Resistance: ", "\nStat Weakness: ", "\nStat Resistance: ", "foeDescription", "printStats2", "Name: ", "\nLevel: ", "\n\n", "Defence: ", "\nMagic Def: ", "\nEvade: ", "printStats3", "Elemental Weakness: \n", "\n\nElemental Resistance: \n", "\n\nStat Weakness: \n", "\n\nStat Resistance: \n", "printStats4", "", "setHP", "makeMove", "attack2", "special", "fadeBuffs", "fadeStatus", "autolife", "poisonDamage", "regenDamage", "default", "bomb", "holy", "dark", "earth", "wind", "thunder", "water", "fire", "evadeDown", "accuracyDown", "magicDefenceDown", "magicAttackDown", "defenceDown", "attackDown", "blind", "ASSetPropFlags"
+Push "_global"
+GetVariable
+Push "Foe"
+GetMember
+Not
+Not
+If loc3850
+Push "_global"
+GetVariable
+Push "Foe"
+DefineFunction "", 4, "n" , "m" , "p" , "point"  {
+Push 0.0, "super"
+CallFunction
+Pop
+Push "this"
+GetVariable
+Push "parent", "p"
+GetVariable
+SetMember
+Push "m"
+GetVariable
+Push 1, "this"
+GetVariable
+Push "levelUp"
+CallMethod
+Pop
+Push "this"
+GetVariable
+Push "foeNumber", "n"
+GetVariable
+SetMember
+Push "point"
+GetVariable
+Push "p"
+GetVariable
+Push "n"
+GetVariable
+Push "this"
+GetVariable
+Push 4
+Push "FoeBrickers"
+GetVariable
+Push "handleGraphicData"
+CallMethod
+Pop
+}
+StoreRegister 1
+SetMember
+Push "_global"
+GetVariable
+Push "Foe"
+GetMember
+Push "Target"
+GetVariable
+Extends
+Push register1, "prototype"
+GetMember
+StoreRegister 2
+Pop
+Push register2, "dropItems"
+DefineFunction2 "", 0, 4, false, false, true, false, true, false, false, true, false {
+Push 0.0
+StoreRegister 2
+Pop
+loc0a35:Push register2, register1, "dropList"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc0bcc
+Push false
+StoreRegister 3
+Pop
+Push register2, 0.0
+Equals2
+Push register2, 1
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.2
+Greater
+And
+Or
+Push register2, 2
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.4
+Greater
+And
+Or
+Push register2, 3
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.6
+Greater
+And
+Or
+Push register2, 4
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.8
+Greater
+And
+Or
+Push register2, 5
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.9
+Greater
+And
+Or
+Push register2, 6
+Equals2
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push 0.95
+Greater
+And
+Or
+Not
+If loc0b8f
+Push true
+StoreRegister 3
+Pop
+loc0b8f:Push register3
+Not
+If loc0bbc
+Push register1, "dropList"
+GetMember
+Push register2
+GetMember
+Push 1, register1, "parent"
+GetMember
+Push "dropItem"
+CallMethod
+Pop
+loc0bbc:Push register2
+Increment
+StoreRegister 2
+Pop
+Jump loc0a35
+}
+loc0bcc:SetMember
+Push register2, "getClass"
+DefineFunction "", 0 {
+Push "Foe"
+Return
+}
+SetMember
+Push register2, "doomed"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "doom"
+GetMember
+Push 0.0
+Greater
+Not
+If loc0cc6
+Push register1, "doom", register1, "doom"
+GetMember
+Decrement
+SetMember
+Push register1, "doom"
+GetMember
+Push 0.0
+Equals2
+Not
+If loc0cc6
+Push register1, "busy", true
+SetMember
+Push 0.0, 999, 1, 3, "death", 1, "null", 0.1, register1, "maxHP"
+GetMember
+Push register1, "hit2HP"
+GetMember
+Multiply
+Push register1, "magicDefence"
+GetMember
+Multiply
+Push "magic", 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "getHit"
+CallMethod
+Pop
+loc0cc6:Push 0.0, register1, "graphic"
+GetMember
+Push "idle"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+Push 0.0, register1, "graphic"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "unbusy"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "busy", false
+SetMember
+Push 0.0, register1, "parent"
+GetMember
+Push "checkBusy"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "getPower"
+DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 3, "t" {
+Push undefined
+StoreRegister 2
+Pop
+Push register3, "attack"
+Equals2
+Not
+If loc0d80
+Push register1, "attack"
+GetMember
+Push register1, "attackBuff"
+GetMember
+Multiply
+StoreRegister 2
+Pop
+loc0d80:Push register3, "magic"
+Equals2
+Not
+If loc0da4
+Push register1, "magicAttack"
+GetMember
+Push register1, "magicAttackBuff"
+GetMember
+Multiply
+StoreRegister 2
+Pop
+loc0da4:Push register2
+Return
+}
+SetMember
+Push register2, "getHpPercent"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "HP"
+GetMember
+Push register1, "maxHP"
+GetMember
+Divide
+Push 100
+Multiply
+Push 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+Push 1
+Add2
+Return
+}
+SetMember
+Push register2, "sendHeal"
+DefineFunction2 "", 2, 6, false, false, true, false, true, false, false, true, false, 5, "pow", 4, "ran" {
+Push register5, register1, "magicAttack"
+GetMember
+Multiply
+Push register1, "magicAttackBuff"
+GetMember
+Multiply
+StoreRegister 3
+Pop
+Push "healing for ", register3
+Add2
+Trace
+Push register1, "targetAll"
+GetMember
+Push "allFoes"
+Equals2
+Not
+If loc0ec8
+Push 0.0
+StoreRegister 2
+Pop
+loc0e56:Push register2, register1, "parent"
+GetMember
+Push "foes"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc0ec8
+Push register1, "parent"
+GetMember
+Push "foes"
+GetMember
+Push register2
+GetMember
+Push "dead"
+GetMember
+Not
+Not
+If loc0eb8
+Push register4, register3, 2, register1, "parent"
+GetMember
+Push "foes"
+GetMember
+Push register2
+GetMember
+Push "getHeal"
+CallMethod
+Pop
+loc0eb8:Push register2
+Increment
+StoreRegister 2
+Pop
+Jump loc0e56
+loc0ec8:Push register1, "targetAll"
+GetMember
+Push "oneFoe"
+Equals2
+Not
+If loc0ef4
+Push register4, register3, 2, register1, "target"
+GetMember
+Push "getHeal"
+CallMethod
+Pop
+}
+loc0ef4:SetMember
+Push register2, "sendHit"
+DefineFunction2 "", 10, 14, false, false, true, false, true, false, false, true, false, 6, "type", 13, "power", 5, "randomness", 9, "element", 7, "e", 12, "stat", 8, "s", 11, "ss", 4, "acc", 10, "critP" {
+Push register6, 1, register1, "getPower"
+CallMethod
+Push register13
+Multiply
+StoreRegister 3
+Pop
+Push register5, register3, 2, register1, "randomize"
+CallMethod
+StoreRegister 3
+Pop
+Push register4, register1, "accuracy"
+GetMember
+Multiply
+Push register1, "accuracyBuff"
+GetMember
+Multiply
+StoreRegister 4
+Pop
+Push register1, "berserk"
+GetMember
+Not
+If loc0fac
+Push register3, 2
+Multiply
+StoreRegister 3
+Pop
+loc0fac:Push register1, "targetAll"
+GetMember
+Push "onePlayer"
+Equals2
+Not
+If loc1017
+Push register10, register4, register11, register8, register12, register7, register9, register5, register3, register6, 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "target"
+GetMember
+Push "getHit"
+CallMethod
+Pop
+loc1017:Push register1, "targetAll"
+GetMember
+Push "allPlayers"
+Equals2
+Not
+If loc10ed
+Push 0.0
+StoreRegister 2
+Pop
+loc103c:Push register2, register1, "parent"
+GetMember
+Push "players"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc10ed
+Push register1, "parent"
+GetMember
+Push "players"
+GetMember
+Push register2
+GetMember
+Push "dead"
+GetMember
+Not
+Not
+If loc10dd
+Push register10, register4, register11, register8, register12, register7, register9, register5, register3, register6, 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "parent"
+GetMember
+Push "players"
+GetMember
+Push register2
+GetMember
+Push "getHit"
+CallMethod
+Pop
+loc10dd:Push register2
+Increment
+StoreRegister 2
+Pop
+Jump loc103c
+loc10ed:Push register1, "targetAll"
+GetMember
+Push "oneFoe"
+Equals2
+Not
+If loc1158
+Push register10, register4, register11, register8, register12, register7, register9, register5, register3, register6, 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "target"
+GetMember
+Push "getHit"
+CallMethod
+Pop
+loc1158:Push register1, "targetAll"
+GetMember
+Push "allFoes"
+Equals2
+Not
+If loc120d
+Push 0.0
+StoreRegister 2
+Pop
+loc117d:Push register2, register1, "parent"
+GetMember
+Push "foes"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc120d
+Push register10, register4, register11, register8, register12, register7, register9, register5, register3, register6, 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "parent"
+GetMember
+Push "foes"
+GetMember
+Push register2
+GetMember
+Push "getHit"
+CallMethod
+Pop
+Push register2
+Increment
+StoreRegister 2
+Pop
+Jump loc117d
+loc120d:Push register1, "targetAll"
+GetMember
+Push "all"
+Equals2
+Not
+If loc1221
+}
+loc1221:SetMember
+Push register2, "swapLayer"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "b" {
+Push register2
+Not
+If loc127b
+Push 0.0, register1, "target"
+GetMember
+Push "getGraphicDepth"
+CallMethod
+Push 1
+Add2
+Push 1, register1, "graphic"
+GetMember
+Push "swapDepths"
+CallMethod
+Pop
+Jump loc1297
+loc127b:Push register1, "depth"
+GetMember
+Push 1, register1, "graphic"
+GetMember
+Push "swapDepths"
+CallMethod
+Pop
+}
+loc1297:SetMember
+Push register2, "getGraphicDepth"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "depth"
+GetMember
+Return
+}
+SetMember
+Push register2, "randomize"
+DefineFunction2 "", 2, 3, false, false, true, false, true, false, true, false, false, 1, "damage", 2, "randomness" {
+Push register1, register1, register2
+Multiply
+Push 2
+Divide
+Subtract
+Push register1
+RandomNumber
+Push register2
+Multiply
+Add2
+StoreRegister 1
+Pop
+Push register1, 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+StoreRegister 1
+Pop
+Push register1
+Return
+}
+SetMember
+Push register2, "specialHit1"
+DefineFunction "", 1, "h"  {
+}
+SetMember
+Push register2, "specialHit2"
+DefineFunction "", 1, "h"  {
+}
+SetMember
+Push register2, "specialHit3"
+DefineFunction "", 1, "h"  {
+}
+SetMember
+Push register2, "specialHit4"
+DefineFunction "", 1, "h"  {
+}
+SetMember
+Push register2, "specialHit5"
+DefineFunction "", 1, "h"  {
+}
+SetMember
+Push register2, "getHit"
+DefineFunction2 "", 1, 4, false, true, true, false, true, false, false, true, false, 3, "hit" {
+Push "foe takes damage: ", register3, "damage"
+GetMember
+Add2
+Push " element: "
+Add2
+Push register3, "element"
+GetMember
+Add2
+Push " status: "
+Add2
+Push register3, "statusEffect"
+GetMember
+Add2
+Push " chance: "
+Add2
+Push register3, "statusChance"
+GetMember
+Add2
+Trace
+Push register1, "dead"
+GetMember
+Not
+Not
+If loc1cfb
+Push register1, "busy", true
+SetMember
+Push register1, "gettingHit", true
+SetMember
+Push 100, "delay", 2, register1, "graphic"
+GetMember
+Push "createEmptyMovieClip"
+CallMethod
+Pop
+Push register1, "graphic"
+GetMember
+Push "delay"
+GetMember
+Push "a", register1
+SetMember
+Push register1, "graphic"
+GetMember
+Push "delay"
+GetMember
+Push "onEnterFrame"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "a"
+GetMember
+Push "gettingHit", false
+SetMember
+Push 0.0, register1, "removeMovieClip"
+CallMethod
+Pop
+}
+SetMember
+Push "Accuracy: ", register3, "accuracy"
+GetMember
+Add2
+Push " Evade: "
+Add2
+Push register1, "evade"
+GetMember
+Add2
+Trace
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push register3, "accuracy"
+GetMember
+Push register1, "evade"
+GetMember
+Push register1, "evadeBuff"
+GetMember
+Multiply
+Divide
+Greater
+Push register1, "stun"
+GetMember
+Not
+And
+Not
+If loc150d
+Push "evade", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Push 3, 0.0, 2, register1, "showDamage"
+CallMethod
+Pop
+Push register1, "parent"
+GetMember
+Push "user"
+GetMember
+Push "dealt", 0.0
+SetMember
+Jump loc1cfb
+loc150d:Push register3, 1, register1, "specialHit1"
+CallMethod
+Pop
+Push register3, "damage", register3, "randomness"
+GetMember
+Push register3, "damage"
+GetMember
+Push 2, register1, "randomize"
+CallMethod
+SetMember
+Push register3, "t"
+GetMember
+Push "attack"
+Equals2
+Not
+If loc1596
+Push register1, "berserk"
+GetMember
+Not
+If loc1577
+Push register3, "damage", register3, "damage"
+GetMember
+Push 2
+Divide
+SetMember
+loc1577:Push register3, "damage", register3, "damage"
+GetMember
+Push register1, "defence"
+GetMember
+Push register1, "defenceBuff"
+GetMember
+Multiply
+Divide
+SetMember
+loc1596:Push register3, "t"
+GetMember
+Push "magic"
+Equals2
+Not
+If loc15c9
+Push register3, "damage", register3, "damage"
+GetMember
+Push register1, "magicDefence"
+GetMember
+Push register1, "magicDefenceBuff"
+GetMember
+Multiply
+Divide
+SetMember
+loc15c9:Push register3, "crit"
+GetMember
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Greater
+Not
+If loc160c
+Push register3, "damage", register3, "damage"
+GetMember
+Push 1.5
+Multiply
+SetMember
+Jump loc161d
+loc160c:Push register3, "crit", 0.0
+SetMember
+loc161d:Push register3, "element"
+GetMember
+Push "ice"
+Equals2
+Not
+If loc1642
+Push register1, "berserk", 0.0
+SetMember
+loc1642:Push register3, "element"
+GetMember
+Push "null"
+Equals2
+Not
+Not
+If loc169b
+Push register3, "damage", register3, "damage"
+GetMember
+Push register3, "element"
+GetMember
+Push 1, register1, "getElementalResistance"
+CallMethod
+Multiply
+Push register3, "elementDegree"
+GetMember
+Multiply
+Push register3, "damage"
+GetMember
+Push 1, register3, "elementDegree"
+GetMember
+Subtract
+Multiply
+Add2
+SetMember
+loc169b:Push register3, "damage", register3, "damage"
+GetMember
+Push 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+SetMember
+Push register3, "statusEffect"
+GetMember
+Push "null"
+Equals2
+Not
+Not
+If loc1a01
+Push 0.0, "Math"
+GetVariable
+Push "random"
+CallMethod
+Push register3, "statusChance"
+GetMember
+Push register3, "statusEffect"
+GetMember
+Push 1, register1, "getStatusResistance"
+CallMethod
+Multiply
+Less2
+Not
+If loc1a01
+Push "Inflicted with ", register3, "statusEffect"
+GetMember
+Add2
+Trace
+Push register3, "statusEffect"
+GetMember
+Push "stun"
+Equals2
+Not
+If loc1780
+Push register1, "stun", register1, "stun"
+GetMember
+Push register3, "statusDegree"
+GetMember
+Add2
+SetMember
+Push 8, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Jump loc1a01
+loc1780:Push register3, "statusEffect"
+GetMember
+Push "poison"
+Equals2
+Not
+If loc1810
+Push register1, "poison", register1, "poison"
+GetMember
+Push register3, "statusDegree"
+GetMember
+Add2
+SetMember
+Push 11, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Push register1, "poison"
+GetMember
+Push 9
+Greater
+Not
+If loc180b
+Push register1, "poison", 9
+SetMember
+loc180b:Jump loc1a01
+loc1810:Push register3, "statusEffect"
+GetMember
+Push "syphon"
+Equals2
+Not
+If loc187c
+Push register1, "syphon", register1, "syphon"
+GetMember
+Push register3, "statusDegree"
+GetMember
+Add2
+SetMember
+Push 9, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Jump loc1a01
+loc187c:Push register3, "statusEffect"
+GetMember
+Push "berserk"
+Equals2
+Not
+If loc18e8
+Push register1, "berserk", register1, "berserk"
+GetMember
+Push register3, "statusDegree"
+GetMember
+Add2
+SetMember
+Push 13, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Jump loc1a01
+loc18e8:Push register3, "statusEffect"
+GetMember
+Push "dispel"
+Equals2
+Not
+If loc1950
+Push 0.0, register1, "dispel"
+CallMethod
+Pop
+Push 10, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Jump loc1a01
+loc1950:Push register3, "statusEffect"
+GetMember
+Push "doom"
+Equals2
+Push register1, "doom"
+GetMember
+Not
+And
+Not
+If loc19bd
+Push register1, "doom", register3, "statusDegree"
+GetMember
+SetMember
+Push 7, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push 3, register1, "parent"
+GetMember
+Push "showStatus"
+CallMethod
+Pop
+Jump loc1a01
+loc19bd:Push register3, "statusEffect"
+GetMember
+Push "death"
+Equals2
+Not
+If loc19e3
+Push register3, "damage", 9999999
+SetMember
+Jump loc1a01
+loc19e3:Push register3, "statusDegree"
+GetMember
+Push register3, "statusEffect"
+GetMember
+Push 2, register1, "debuff"
+CallMethod
+Pop
+loc1a01:Push "after defence applied: ", register3, "damage"
+GetMember
+Add2
+Push " element: "
+Add2
+Push register3, "element"
+GetMember
+Add2
+Push " status: "
+Add2
+Push register3, "statusEffect"
+GetMember
+Add2
+Push " chance: "
+Add2
+Push register3, "statusChance"
+GetMember
+Add2
+Trace
+Push register3, "damage"
+GetMember
+Push 0.0
+Less2
+Not
+If loc1a7a
+Push 0.0, register3, "damage"
+GetMember
+Subtract
+Push 1, register1, "getHeal"
+CallMethod
+Pop
+Jump loc1cfb
+loc1a7a:Push register1, "HP", register1, "HP"
+GetMember
+Push register3, "damage"
+GetMember
+Subtract
+SetMember
+Push 0.0, register1, "parent"
+GetMember
+Push "user"
+GetMember
+Push "getClass"
+CallMethod
+Push "Player"
+Equals2
+Push register3, "damage"
+GetMember
+Push 9999999
+Equals2
+Not
+And
+Not
+If loc1b2e
+Push register1, "parent"
+GetMember
+Push "user"
+GetMember
+Push "dealt", register3, "damage"
+GetMember
+SetMember
+Push register3, "damage"
+GetMember
+Trace
+Push register3, "damage"
+GetMember
+Push 1, register2, "defs"
+GetMember
+Push "damageRecord"
+CallMethod
+Pop
+Push register3, "damage"
+GetMember
+Push "maxDamage", 2, register2, "kongregate"
+GetMember
+Push "stats"
+GetMember
+Push "submit"
+CallMethod
+Pop
+loc1b2e:Push register3, "damage"
+GetMember
+Push 9999999
+Equals2
+Not
+If loc1b62
+Push 5, 2, 2, register1, "showDamage"
+CallMethod
+Pop
+Jump loc1c37
+loc1b62:Push register3, "crit"
+GetMember
+Not
+If loc1b90
+Push 2, register3, "damage"
+GetMember
+Push 2, register1, "showDamage"
+CallMethod
+Pop
+Jump loc1c37
+loc1b90:Push register3, "element"
+GetMember
+Push 1, register1, "getElementalResistance"
+CallMethod
+Push 1
+Greater
+Not
+If loc1bd4
+Push 17, register3, "damage"
+GetMember
+Push 2, register1, "showDamage"
+CallMethod
+Pop
+Jump loc1c37
+loc1bd4:Push register3, "element"
+GetMember
+Push 1, register1, "getElementalResistance"
+CallMethod
+Push 1
+Less2
+Not
+If loc1c18
+Push 16, register3, "damage"
+GetMember
+Push 2, register1, "showDamage"
+CallMethod
+Pop
+Jump loc1c37
+loc1c18:Push 0.0, register3, "damage"
+GetMember
+Push 2, register1, "showDamage"
+CallMethod
+Pop
+loc1c37:Push register1, "HP"
+GetMember
+Push 0.0
+Greater
+Not
+Not
+If loc1c90
+Push 0.0, register1, "doDie"
+CallMethod
+Pop
+Push "die", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Push register3, 1, register1, "specialHit5"
+CallMethod
+Pop
+Jump loc1cfb
+loc1c90:Push register3, 1, register1, "specialHit2"
+CallMethod
+Not
+If loc1caa
+Jump loc1cfb
+loc1caa:Push register3, "damage"
+GetMember
+Push register1, "hit2HP"
+GetMember
+Push register1, "maxHP"
+GetMember
+Multiply
+Greater
+Not
+If loc1ce5
+Push "hit2", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Jump loc1cfb
+loc1ce5:Push "hit", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+loc1cfb:Push 0.0, register1, "parent"
+GetMember
+Push "updateFoeBars"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "doDie"
+DefineFunction2 "", 0, 3, false, true, true, false, true, false, false, true, false {
+Push 0.0, register1, "addPool"
+CallMethod
+Pop
+Push register1, "HP", 0.0
+SetMember
+Push register1, "dead", true
+SetMember
+Push 0.0, register1, "dropItems"
+CallMethod
+Pop
+Push register2, "defs"
+GetMember
+Push "flags"
+GetMember
+Push "killCount", register2, "defs"
+GetMember
+Push "flags"
+GetMember
+Push "killCount"
+GetMember
+Increment
+SetMember
+Push 1, "kills", 2, register2, "kongregate"
+GetMember
+Push "stats"
+GetMember
+Push "submit"
+CallMethod
+Pop
+Push register1, "parent"
+GetMember
+Push "playerStatus"
+GetMember
+Push register1, "foeNumber"
+GetMember
+Push false
+SetMember
+Push 0.0, register1, "parent"
+GetMember
+Push "checkAllDead"
+CallMethod
+Pop
+Push register1, "doom", 0.0
+SetMember
+Push register1, "regen", 0.0
+SetMember
+Push register1, "poison", 0.0
+SetMember
+Push 0.0, register1, "parent"
+GetMember
+Push "updateFoeBars"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "addPool"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "parent"
+GetMember
+Push "goldPool", register1, "parent"
+GetMember
+Push "goldPool"
+GetMember
+Push register1, "gold"
+GetMember
+Add2
+SetMember
+Push register1, "parent"
+GetMember
+Push "expPool", register1, "parent"
+GetMember
+Push "expPool"
+GetMember
+Push register1, "experience"
+GetMember
+Add2
+SetMember
+Push register1, "parent"
+GetMember
+Push "abilityPool", register1, "parent"
+GetMember
+Push "abilityPool"
+GetMember
+Push register1, "abilityPoints"
+GetMember
+Add2
+SetMember
+}
+SetMember
+Push register2, "dispel"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "regen", 0.0
+SetMember
+Push register1, "attackBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1eec
+Push register1, "attackBuff", 1
+SetMember
+loc1eec:Push register1, "defenceBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1f10
+Push register1, "defenceBuff", 1
+SetMember
+loc1f10:Push register1, "magicAttackBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1f34
+Push register1, "magicAttackBuff", 1
+SetMember
+loc1f34:Push register1, "magicDefenceBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1f58
+Push register1, "magicDefenceBuff", 1
+SetMember
+loc1f58:Push register1, "evadeBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1f7c
+Push register1, "evadeBuff", 1
+SetMember
+loc1f7c:Push register1, "accuracyBuff"
+GetMember
+Push 1
+Greater
+Not
+If loc1fa0
+Push register1, "accuracyBuff", 1
+SetMember
+}
+loc1fa0:SetMember
+Push register2, "active"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "b" {
+Push register2
+Not
+If loc1fd0
+Push register1, "act", true
+SetMember
+Jump loc1ff2
+loc1fd0:Push register1, "act", false
+SetMember
+Push 0.0, register1, "parent"
+GetMember
+Push "turnEnd"
+CallMethod
+Pop
+}
+loc1ff2:SetMember
+Push register2, "turnStart"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "busy", true
+SetMember
+Push register1, "turnTaken", true
+SetMember
+Push register1, "target", 0.0, register1, "parent"
+GetMember
+Push "randomPlayer"
+CallMethod
+SetMember
+Push register1, "targetAll", "onePlayer"
+SetMember
+Push 2, 1, register1, "getXY"
+CallMethod
+Pop
+Push register1, "gettingHit", true
+SetMember
+Push 100, "delay", 2, register1, "graphic"
+GetMember
+Push "createEmptyMovieClip"
+CallMethod
+Pop
+Push register1, "graphic"
+GetMember
+Push "delay"
+GetMember
+Push "a", register1
+SetMember
+Push register1, "graphic"
+GetMember
+Push "delay"
+GetMember
+Push "c", 2
+SetMember
+Push register1, "graphic"
+GetMember
+Push "delay"
+GetMember
+Push "onEnterFrame"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "c"
+GetMember
+Push 0.0
+Equals2
+Not
+If loc2106
+Push register1, "a"
+GetMember
+Push "gettingHit", false
+SetMember
+Push 0.0, register1, "removeMovieClip"
+CallMethod
+Pop
+Jump loc2114
+loc2106:Push register1, "c", register1, "c"
+GetMember
+Decrement
+SetMember
+}
+loc2114:SetMember
+}
+SetMember
+Push register2, "round"
+DefineFunction2 "", 1, 2, false, false, true, false, true, false, true, false, false, 1, "nn" {
+Push register1, 100
+Multiply
+Push 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+Push 100
+Divide
+Return
+}
+SetMember
+Push register2, "debuff"
+DefineFunction2 "", 2, 5, false, false, true, false, true, false, false, true, false, 3, "stat", 4, "ss" {
+Push register3, "length"
+GetMember
+Push 4
+Subtract
+Push 0.0, 2, register3, "substring"
+CallMethod
+StoreRegister 2
+Pop
+Push register1, register2, "Buff"
+Add2
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push register4
+Subtract
+SetMember
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push register1, "minBuff"
+GetMember
+Less2
+Not
+If loc21e4
+Push register1, register2, "Buff"
+Add2
+Push register1, "minBuff"
+GetMember
+SetMember
+loc21e4:Push register1, register2, "Buff"
+Add2
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push 1, register1, "round"
+CallMethod
+SetMember
+Push 0.0, register1, "graphic"
+GetMember
+Push "idle"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+Push 0.0, register1, "graphic"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "buff"
+DefineFunction2 "", 2, 5, false, false, true, false, true, false, false, true, false, 3, "stat", 4, "ss" {
+Push register3, "length"
+GetMember
+Push 2
+Subtract
+Push 0.0, 2, register3, "substring"
+CallMethod
+StoreRegister 2
+Pop
+Push register1, register2, "Buff"
+Add2
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push register4
+Add2
+SetMember
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push register1, "maxBuff"
+GetMember
+Greater
+Not
+If loc22db
+Push register1, register2, "Buff"
+Add2
+Push register1, "maxBuff"
+GetMember
+SetMember
+loc22db:Push register1, register2, "Buff"
+Add2
+Push register1, register2, "Buff"
+Add2
+GetMember
+Push 1, register1, "round"
+CallMethod
+SetMember
+Push 0.0, register1, "graphic"
+GetMember
+Push "idle"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+Push 0.0, register1, "graphic"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "showDamage"
+DefineFunction2 "", 2, 4, false, false, true, false, true, false, false, true, false, 2, "damage", 3, "style" {
+Push register3, 3, 1, register1, "getY"
+CallMethod
+Push 3, 1, register1, "getX"
+CallMethod
+Push register2, 4, register1, "parent"
+GetMember
+Push "showDamage"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "getHeal"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "damage" {
+Push register1, "dead"
+GetMember
+Not
+Not
+If loc2464
+Push register2, 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+StoreRegister 2
+Pop
+Push register1, "HP", register1, "HP"
+GetMember
+Push register2
+Add2
+SetMember
+Push register1, "HP"
+GetMember
+Push register1, "maxHP"
+GetMember
+Greater
+Not
+If loc2417
+Push register1, "HP", register1, "maxHP"
+GetMember
+SetMember
+loc2417:Push "heal", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Push register1, "busy", true
+SetMember
+Push 1, register2, 2, register1, "showDamage"
+CallMethod
+Pop
+Push 0.0, register1, "parent"
+GetMember
+Push "updateFoeBars"
+CallMethod
+Pop
+}
+loc2464:SetMember
+Push register2, "healStatus"
+DefineFunction "", 0 {
+}
+SetMember
+Push register2, "castSpell"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "spell" {
+Push register1, "parent"
+GetMember
+Push "magicGraphics"
+GetMember
+Push "user", register1
+SetMember
+Push register1, "parent"
+GetMember
+Push "magicGraphics"
+GetMember
+Push "targetAll", register1, "targetAll"
+GetMember
+SetMember
+Push register1, "parent"
+GetMember
+Push "magicGraphics"
+GetMember
+Push "target", register1, "target"
+GetMember
+SetMember
+Push register2, 1, register1, "parent"
+GetMember
+Push "magicGraphics"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+Push register1, "parent"
+GetMember
+Push "magicGraphics"
+GetMember
+Push "busy", true
+SetMember
+}
+SetMember
+Push register2, "getElementalResistance"
+DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 3, "el" {
+Push 0.0
+StoreRegister 2
+Pop
+loc2530:Push register2, register1, "elementalResistance"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc258b
+Push register1, "elementalResistance"
+GetMember
+Push register2
+GetMember
+Push register3
+Equals2
+Not
+If loc2576
+Push register1, "elementalResistance"
+GetMember
+Push register2, 1
+Add2
+GetMember
+Return
+loc2576:Push register2, 2
+Add2
+StoreRegister 2
+Pop
+Jump loc2530
+}
+loc258b:SetMember
+Push register2, "getStatusResistance"
+DefineFunction2 "", 1, 4, false, false, true, false, true, false, false, true, false, 3, "el" {
+Push 0.0
+StoreRegister 2
+Pop
+loc25b3:Push register2, register1, "statusResistance"
+GetMember
+Push "length"
+GetMember
+Less2
+Not
+If loc262c
+Push register1, "statusResistance"
+GetMember
+Push register2
+GetMember
+Push register3
+Equals2
+Not
+If loc2617
+Push register3, " resistance "
+Add2
+Push register1, "statusResistance"
+GetMember
+Push register2, 1
+Add2
+GetMember
+Add2
+Trace
+Push register1, "statusResistance"
+GetMember
+Push register2, 1
+Add2
+GetMember
+Return
+loc2617:Push register2, 2
+Add2
+StoreRegister 2
+Pop
+Jump loc25b3
+}
+loc262c:SetMember
+Push register2, "sortResistance"
+DefineFunction2 "", 1, 9, false, false, true, false, true, false, false, true, false, 3, "arr" {
+Push 0.0
+InitArray
+StoreRegister 5
+Pop
+Push 0.0
+StoreRegister 6
+Pop
+Push undefined
+StoreRegister 8
+Pop
+Push 0.0
+StoreRegister 7
+Pop
+loc2681:Push register7, register3, "length"
+GetMember
+Less2
+Not
+If loc2768
+Push -5
+StoreRegister 4
+Pop
+Push 0.0
+StoreRegister 2
+Pop
+loc26b0:Push register2, register3, "length"
+GetMember
+Less2
+Not
+If loc2729
+Push register3, register2, 1
+Add2
+GetMember
+Push register4
+Less2
+Not
+Push register3, register2
+GetMember
+Push register5, 2, register1, "notIn"
+CallMethod
+And
+Not
+If loc2714
+Push register3, register2, 1
+Add2
+GetMember
+StoreRegister 4
+Pop
+Push register3, register2
+GetMember
+StoreRegister 8
+Pop
+loc2714:Push register2, 2
+Add2
+StoreRegister 2
+Pop
+Jump loc26b0
+loc2729:Push register5, register6, register8
+SetMember
+Push register6
+Increment
+StoreRegister 6
+Pop
+Push register5, register6, register4
+SetMember
+Push register6
+Increment
+StoreRegister 6
+Pop
+Push register7, 2
+Add2
+StoreRegister 7
+Pop
+Jump loc2681
+loc2768:Push register5
+Return
+}
+SetMember
+Push register2, "notIn"
+DefineFunction2 "", 2, 4, false, false, true, false, true, false, true, false, false, 2, "arr", 3, "item" {
+Push 0.0
+StoreRegister 1
+Pop
+loc279d:Push register1, register2, "length"
+GetMember
+Less2
+Not
+If loc27d8
+Push register2, register1
+GetMember
+Push register3
+Equals2
+Not
+If loc27c8
+Push false
+Return
+loc27c8:Push register1
+Increment
+StoreRegister 1
+Pop
+Jump loc279d
+loc27d8:Push true
+Return
+}
+SetMember
+Push register2, "getWeakness"
+DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 3, "arr" {
+Push register3, 1, register1, "sortResistance"
+CallMethod
+StoreRegister 3
+Pop
+Push 0.0
+InitArray
+StoreRegister 5
+Pop
+Push 0.0
+StoreRegister 2
+Pop
+Push 0.0
+StoreRegister 4
+Pop
+loc283e:Push register3, register2, 1
+Add2
+GetMember
+Push 1.3
+Less2
+Not
+Not
+If loc2890
+Push register5, register4, " ", register3, register2
+GetMember
+Add2
+SetMember
+Push register2, 2
+Add2
+StoreRegister 2
+Pop
+Push register4
+Increment
+StoreRegister 4
+Pop
+Jump loc283e
+loc2890:Push register5
+Return
+}
+SetMember
+Push register2, "getResistance"
+DefineFunction2 "", 1, 6, false, false, true, false, true, false, false, true, false, 3, "arr" {
+Push register3, 1, register1, "sortResistance"
+CallMethod
+StoreRegister 3
+Pop
+Push 0.0
+InitArray
+StoreRegister 5
+Pop
+Push register3, "length"
+GetMember
+StoreRegister 2
+Pop
+Push 0.0
+StoreRegister 4
+Pop
+loc28f2:Push register3, register2, 1
+Subtract
+GetMember
+Push 0.7
+Greater
+Not
+Not
+If loc294a
+Push register5, register4, " ", register3, register2, 2
+Subtract
+GetMember
+Add2
+SetMember
+Push register2, 2
+Subtract
+StoreRegister 2
+Pop
+Push register4
+Increment
+StoreRegister 4
+Pop
+Jump loc28f2
+loc294a:Push register5
+Return
+}
+SetMember
+Push register2, "levelUp"
+DefineFunction2 "", 1, 6, false, true, true, false, true, false, false, true, false, 3, "m" {
+Push undefined
+StoreRegister 4
+Pop
+Push undefined
+StoreRegister 5
+Pop
+Push register2, "defs"
+GetMember
+Push "difficulty"
+GetMember
+Push "easy"
+Equals2
+Not
+If loc29b4
+Push 0.7
+StoreRegister 4
+Pop
+Push 0.7
+StoreRegister 5
+Pop
+loc29b4:Push register2, "defs"
+GetMember
+Push "difficulty"
+GetMember
+Push "normal"
+Equals2
+Not
+If loc29e8
+Push 1
+StoreRegister 4
+Pop
+Push 1
+StoreRegister 5
+Pop
+loc29e8:Push register2, "defs"
+GetMember
+Push "difficulty"
+GetMember
+Push "hard"
+Equals2
+Not
+If loc2a20
+Push 1.3
+StoreRegister 4
+Pop
+Push 1
+StoreRegister 5
+Pop
+loc2a20:Push register2, "defs"
+GetMember
+Push "difficulty"
+GetMember
+Push "epic"
+Equals2
+Not
+If loc2a58
+Push 1.6
+StoreRegister 4
+Pop
+Push 1
+StoreRegister 5
+Pop
+loc2a58:Push register1, "level", register3
+SetMember
+Push register1, "maxHP", register1, "maxHP"
+GetMember
+Push register3, 1.18, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push register5
+Multiply
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "HP", register1, "maxHP"
+GetMember
+SetMember
+Push register1, "attack", register1, "attack"
+GetMember
+Push register3, 1.28, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push register4
+Multiply
+SetMember
+Push register1, "magicAttack", register1, "magicAttack"
+GetMember
+Push register3, 1.28, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push register4
+Multiply
+SetMember
+Push register1, "defence", register1, "defence"
+GetMember
+Push 0.2, register1, "defence"
+GetMember
+Multiply
+Push register3, 5
+Divide
+Multiply
+Add2
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "magicDefence", register1, "magicDefence"
+GetMember
+Push 0.2, register1, "magicDefence"
+GetMember
+Multiply
+Push register3, 5
+Divide
+Multiply
+Add2
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "evade", register1, "evade"
+GetMember
+Push 0.2, register1, "evade"
+GetMember
+Multiply
+Push register3, 5
+Divide
+Multiply
+Add2
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "accuracy", register1, "accuracy"
+GetMember
+Push 0.2, register1, "accuracy"
+GetMember
+Multiply
+Push register3, 5
+Divide
+Multiply
+Add2
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "gold", register1, "gold"
+GetMember
+Push register3, 1.2, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "experience", register1, "experience"
+GetMember
+Push register3, 1.21, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+Push register1, "abilityPoints", register1, "abilityPoints"
+GetMember
+Push register3, 1.21, 2, "Math"
+GetVariable
+Push "pow"
+CallMethod
+Multiply
+Push 1, "Math"
+GetVariable
+Push "floor"
+CallMethod
+SetMember
+}
+SetMember
+Push register2, "getXY"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "a" {
+Push register1, "graphic"
+GetMember
+Push "X", register2, 1, register1, "getX"
+CallMethod
+Push 2, 1, register1, "target"
+GetMember
+Push "getX"
+CallMethod
+Subtract
+Push 12
+Divide
+SetMember
+Push register1, "graphic"
+GetMember
+Push "Y", register2, 1, register1, "getY"
+CallMethod
+Push 2, 1, register1, "target"
+GetMember
+Push "getY"
+CallMethod
+Subtract
+Push 12
+Divide
+SetMember
+}
+SetMember
+Push register2, "getX"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "a" {
+Push register2, 1, register1, "graphic"
+GetMember
+Push "getPoint"
+CallMethod
+Push "_x"
+GetMember
+Push register1, "graphic"
+GetMember
+Push "_xscale"
+GetMember
+Multiply
+Push 100
+Divide
+Push register1, "graphic"
+GetMember
+Push "_x"
+GetMember
+Add2
+Return
+}
+SetMember
+Push register2, "getY"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "a" {
+Push register2, 1, register1, "graphic"
+GetMember
+Push "getPoint"
+CallMethod
+Push "_y"
+GetMember
+Push register1, "graphic"
+GetMember
+Push "_yscale"
+GetMember
+Multiply
+Push 100
+Divide
+Push register1, "graphic"
+GetMember
+Push "_y"
+GetMember
+Add2
+Return
+}
+SetMember
+Push register2, "reposition"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "point" {
+Push register1, "graphic"
+GetMember
+Push "_x", register2, "_x"
+GetMember
+Push register1, "graphic"
+GetMember
+Push "point1"
+GetMember
+Push "_x"
+GetMember
+Push register1, "scaleGraphic"
+GetMember
+Multiply
+Push 100
+Divide
+Subtract
+SetMember
+Push register1, "graphic"
+GetMember
+Push "_y", register2, "_y"
+GetMember
+Push register1, "graphic"
+GetMember
+Push "point1"
+GetMember
+Push "_y"
+GetMember
+Push register1, "scaleGraphic"
+GetMember
+Multiply
+Push 100
+Divide
+Subtract
+SetMember
+Push register1, "graphic"
+GetMember
+Push "_xscale", register1, "graphic"
+GetMember
+Push "_yscale", register1, "scaleGraphic"
+GetMember
+StoreRegister 0
+SetMember
+Push register0
+SetMember
+}
+SetMember
+Push register2, "printStats"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "\nName: ", register1, "foeName"
+GetMember
+Add2
+Push "\nType: "
+Add2
+Push register1, "foeType"
+GetMember
+Add2
+Push "\nHP: "
+Add2
+Push register1, "HP"
+GetMember
+Add2
+Push "/"
+Add2
+Push register1, "maxHP"
+GetMember
+Add2
+Push "\n"
+Add2
+Push "Elem Weakness: "
+Add2
+Push register1, "elementalResistance"
+GetMember
+Push 1, register1, "getWeakness"
+CallMethod
+Add2
+Push "\nElem Resistance: "
+Add2
+Push register1, "elementalResistance"
+GetMember
+Push 1, register1, "getResistance"
+CallMethod
+Add2
+Push "\nStat Weakness: "
+Add2
+Push register1, "statusResistance"
+GetMember
+Push 1, register1, "getWeakness"
+CallMethod
+Add2
+Push "\nStat Resistance: "
+Add2
+Push register1, "statusResistance"
+GetMember
+Push 1, register1, "getResistance"
+CallMethod
+Add2
+Push "\n"
+Add2
+Push register1, "foeDescription"
+GetMember
+Add2
+Push "\n"
+Add2
+Trace
+}
+SetMember
+Push register2, "printStats2"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "Name: ", register1, "foeName"
+GetMember
+Add2
+Push "\nLevel: "
+Add2
+Push register1, "level"
+GetMember
+Add2
+Push "\nType: "
+Add2
+Push register1, "foeType"
+GetMember
+Add2
+Push "\nHP: "
+Add2
+Push register1, "HP"
+GetMember
+Add2
+Push "/"
+Add2
+Push register1, "maxHP"
+GetMember
+Add2
+Push "\n\n"
+Add2
+Push "Defence: "
+Add2
+Push register1, "defence"
+GetMember
+Add2
+Push "\nMagic Def: "
+Add2
+Push register1, "magicDefence"
+GetMember
+Add2
+Push "\nEvade: "
+Add2
+Push register1, "evade"
+GetMember
+Add2
+Push "\n\n"
+Add2
+Push register1, "foeDescription"
+GetMember
+Add2
+Return
+}
+SetMember
+Push register2, "printStats3"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "Elemental Weakness: \n", register1, "elementalResistance"
+GetMember
+Push 1, register1, "getWeakness"
+CallMethod
+Add2
+Push "\n\nElemental Resistance: \n"
+Add2
+Push register1, "elementalResistance"
+GetMember
+Push 1, register1, "getResistance"
+CallMethod
+Add2
+Push "\n\nStat Weakness: \n"
+Add2
+Push register1, "statusResistance"
+GetMember
+Push 1, register1, "getWeakness"
+CallMethod
+Add2
+Push "\n\nStat Resistance: \n"
+Add2
+Push register1, "statusResistance"
+GetMember
+Push 1, register1, "getResistance"
+CallMethod
+Add2
+Return
+}
+SetMember
+Push register2, "printStats4"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push "", register1, "foeDescription"
+GetMember
+Add2
+Push "\n"
+Add2
+Push 0.0, register1, "printStats3"
+CallMethod
+Add2
+Return
+}
+SetMember
+Push register2, "setHP"
+DefineFunction2 "", 1, 3, false, false, true, false, true, false, false, true, false, 2, "h" {
+Push register1, "HP", register2
+SetMember
+Push register1, "maxHP", register2
+SetMember
+}
+SetMember
+Push register2, "makeMove"
+DefineFunction2 "", 0, 3, false, false, true, false, true, false, false, true, false {
+Push 4
+RandomNumber
+StoreRegister 2
+Pop
+Push register2, 0.0
+Equals2
+Not
+If loc314b
+Push "attack", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+loc314b:Push register2, 1
+Equals2
+Not
+If loc3172
+Push "attack2", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+loc3172:Push register2, 2
+Equals2
+Not
+If loc3199
+Push "special", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+loc3199:Push register2, 2
+Equals2
+Not
+If loc31c0
+Push "magic", 1, register1, "graphic"
+GetMember
+Push "gotoAndPlay"
+CallMethod
+Pop
+}
+loc31c0:SetMember
+Push register2, "fadeBuffs"
+DefineFunction2 "", 0, 4, false, false, true, false, true, false, false, true, false {
+Push "accuracy", "evade", "magicDefence", "defence", "magicAttack", "attack", 6
+InitArray
+StoreRegister 3
+Pop
+Push 0.0
+StoreRegister 2
+Pop
+loc31fe:Push register2, register3, "length"
+GetMember
+Less2
+Not
+If loc3324
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 1
+Greater
+Not
+If loc325e
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 0.05
+Subtract
+SetMember
+loc325e:Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 1
+Less2
+Not
+If loc32ad
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 0.05
+Add2
+SetMember
+loc32ad:Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 100
+Multiply
+SetMember
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+Push register1, register3, register2
+GetMember
+Push "Buff"
+Add2
+GetMember
+Push 1, "Math"
+GetVariable
+Push "round"
+CallMethod
+Push 100
+Divide
+SetMember
+Push register2
+Increment
+StoreRegister 2
+Pop
+Jump loc31fe
+loc3324:Push 0.0, register1, "graphic"
+GetMember
+Push "idle"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+Push 0.0, register1, "graphic"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "fadeStatus"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "stun"
+GetMember
+Push 0.0
+Greater
+Not
+If loc33a2
+Push register1, "stun", register1, "stun"
+GetMember
+Decrement
+SetMember
+loc33a2:Push register1, "syphon"
+GetMember
+Push 0.0
+Greater
+Not
+If loc33cb
+Push register1, "syphon", register1, "syphon"
+GetMember
+Decrement
+SetMember
+loc33cb:Push register1, "berserk"
+GetMember
+Push 0.0
+Greater
+Not
+If loc33f4
+Push register1, "berserk", register1, "berserk"
+GetMember
+Decrement
+SetMember
+loc33f4:Push register1, "regen"
+GetMember
+Push 0.0
+Greater
+Not
+If loc341d
+Push register1, "regen", register1, "regen"
+GetMember
+Decrement
+SetMember
+loc341d:Push register1, "autolife"
+GetMember
+Push 0.0
+Greater
+Not
+If loc3446
+Push register1, "autolife", register1, "autolife"
+GetMember
+Decrement
+SetMember
+loc3446:Push 0.0, register1, "graphic"
+GetMember
+Push "idle"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+Push 0.0, register1, "graphic"
+GetMember
+Push "stats"
+GetMember
+Push "update"
+CallMethod
+Pop
+}
+SetMember
+Push register2, "poisonDamage"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "poison"
+GetMember
+Push 0.0
+Equals2
+Not
+Not
+If loc3563
+Push 0.0, 999, 0.0, 0.0, "null", 1, "poison", 0.1, 7, register1, "level"
+GetMember
+Multiply
+Push register1, "level"
+GetMember
+Push 5
+Divide
+Multiply
+Push register1, "poison"
+GetMember
+Multiply
+Push register1, "magicDefence"
+GetMember
+Multiply
+Push 5
+Add2
+Push "magic", 10
+Push "FoeBrickers"
+GetVariable
+Push "makeDamageObject"
+CallMethod
+Push 1, register1, "getHit"
+CallMethod
+Pop
+}
+loc3563:SetMember
+Push register2, "regenDamage"
+DefineFunction2 "", 0, 2, false, false, true, false, true, false, false, true, false {
+Push register1, "regen"
+GetMember
+Push 0.0
+Equals2
+Not
+Push register1, "dead"
+GetMember
+Not
+And
+Not
+If loc35d6
+Push 0.1, register1, "level"
+GetMember
+Push register1, "level"
+GetMember
+Multiply
+Push register1, "level"
+GetMember
+Multiply
+Push 6
+Divide
+Push 2, register1, "getHeal"
+CallMethod
+Pop
+}
+loc35d6:SetMember
+Push register2, "foeDescription", "default"
+SetMember
+Push register2, "level", 1
+SetMember
+Push register2, "busy", true
+SetMember
+Push register2, "turnTaken", false
+SetMember
+Push register2, "hit2HP", 0.25
+SetMember
+Push register2, "attack", 1
+SetMember
+Push register2, "defence", 1
+SetMember
+Push register2, "magicAttack", 1
+SetMember
+Push register2, "magicDefence", 1
+SetMember
+Push register2, "evade", 1
+SetMember
+Push register2, "accuracy", 1
+SetMember
+Push register2, "attackBuff", 1
+SetMember
+Push register2, "defenceBuff", 1
+SetMember
+Push register2, "magicAttackBuff", 1
+SetMember
+Push register2, "magicDefenceBuff", 1
+SetMember
+Push register2, "evadeBuff", 1
+SetMember
+Push register2, "accuracyBuff", 1
+SetMember
+Push register2, "scaleGraphic", 100
+SetMember
+Push register2, "stun", 0.0
+SetMember
+Push register2, "poison", 0.0
+SetMember
+Push register2, "syphon", 0.0
+SetMember
+Push register2, "berserk", 0.0
+SetMember
+Push register2, "regen", 0.0
+SetMember
+Push register2, "doom", 0.0
+SetMember
+Push register2, "autolife", 0.0
+SetMember
+Push register2, "elementalResistance", 1, "bomb", 1, "holy", 1, "dark", 1, "earth", 1, "poison", 1, "wind", 1, "thunder", 1, "ice", 1, "water", 1, "fire", 20
+InitArray
+SetMember
+Push register2, "statusResistance", 1, "evadeDown", 1, "accuracyDown", 1, "magicDefenceDown", 1, "magicAttackDown", 1, "defenceDown", 1, "attackDown", 1, "doom", 1, "dispel", 1, "berserk", 1, "death", 1, "blind", 1, "syphon", 1, "stun", 1, "poison", 28
+InitArray
+SetMember
+Push register2, "act", false
+SetMember
+Push register2, "maxBuff", 1.7
+SetMember
+Push register2, "minBuff", 0.5
+SetMember
+Push register2, "gettingHit", false
+SetMember
+Push 1, null, "_global"
+GetVariable
+Push "Foe"
+GetMember
+Push "prototype"
+GetMember
+Push 3, "ASSetPropFlags"
+CallFunction
+loc3850:Pop
