@@ -18,17 +18,6 @@ Pop
 Push 0
 StoreRegister 5
 Pop
-Push "nbs"
-Push "non-breaking space"
-SetVariable
-Push "nbs"
-Push 160
-Push 1
-Push "String"
-GetVariable
-Push "fromCharCode"
-CallMethod
-SetVariable
 Push "zwnbs"
 Push "0 width no-break space"
 SetVariable
@@ -40,7 +29,7 @@ GetVariable
 Push "fromCharCode"
 CallMethod
 SetVariable
-loc3218:Push register2
+loc2ef2:Push register2
 Push register4
 Push 1
 Add2
@@ -48,8 +37,8 @@ GetMember
 Push 1
 Greater
 Not
-If loc3324
-Push "_loc69_"
+If loc2fed
+Push "degree"
 Push 1
 Push register2
 Push register4
@@ -60,46 +49,41 @@ Subtract
 Push -100
 Multiply
 SetVariable
-Push "_loc69_"
+Push "degree"
 Push "-"
 Push "zwnbs"
 GetVariable
 Add2
-Push "_loc69_"
+Push "degree"
 GetVariable
 Add2
+SetVariable
+Push "separator"
+Push ""
 SetVariable
 Push register4
 Push 0
 Greater
 Not
-If loc32c9
-Push register3
-Push register5
+If loc2f84
+Push "separator"
 Push " "
-Push "_loc69_"
-GetVariable
-Add2
-Push "%"
-Add2
-Push "nbs"
-GetVariable
-Add2
-Push register2
-Push register4
-GetMember
-Add2
-SetMember
-Jump loc32f9
-loc32c9:Push register3
+SetVariable
+loc2f84:Push register3
 Push register5
-Push ""
-Push "_loc69_"
+Push "separator"
+GetVariable
+Push "degree"
 GetVariable
 Add2
 Push "%"
 Add2
-Push "nbs"
+Push "zwnbs"
+GetVariable
+Add2
+Push " "
+Add2
+Push "zwnbs"
 GetVariable
 Add2
 Push register2
@@ -107,7 +91,7 @@ Push register4
 GetMember
 Add2
 SetMember
-loc32f9:Push register4
+Push register4
 Push 2
 Add2
 StoreRegister 4
@@ -117,8 +101,8 @@ Push 1
 Add2
 StoreRegister 5
 Pop
-Jump loc3218
-loc3324:Push register3
+Jump loc2ef2
+loc2fed:Push register3
 Return
 }
 SetMember

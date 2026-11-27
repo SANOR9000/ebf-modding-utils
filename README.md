@@ -14,8 +14,16 @@ Also reworks Rune Claw to use Akron's orb regardless of the latter's position or
 ### redirect-sendHits-to-magicGraphics
 Remember the 4 copies of ```function luckystar()```? Now you can make them always redirect to ```magicGraphics``` instead
 
+### safe-as-edit-player-foe-scripts
+Moves some code from Foe and Player scripts to an independent class to isolate code that causes those scripts to brick when using ActionScript editing
+
 ### foe-resistance-percentage
-When viewing the stats of a foe, you'll be able to see the degree of the foe's resistances (100% fire, -80% dark, etc.)
+When viewing the stats of a foe, you'll be able to see the degree of the foe's resistances (100% fire, -80% dark, etc.)  
+Note that foes with long descriptions like the Dark Golem may have their text cut off so you'll have to modify the sprites that show foe descriptions.  
+Ordered from least to most text lines it can show without issues:
+- "bestiaryBox" (DefineSprite 6746)
+- Frame 8 of DefineSprite 4065 (yeah it uses the same tooltip for equipment idk why)
+- "scanBox" (DefineSprite 10)
 
 ## Save editing
 
